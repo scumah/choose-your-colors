@@ -1,0 +1,4 @@
+script: npm install && npm run build
+artifacts:
+  app:
+    path: out
