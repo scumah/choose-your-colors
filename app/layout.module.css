@@ -1,0 +1,10 @@
+.main {
+  padding: 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.tooltip {
+  color: red;
+  background-color: rgb(0, 247, 255);
+}

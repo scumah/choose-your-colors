@@ -1,0 +1,110 @@
+.teamWrapper {
+  display: grid;
+  grid-template-columns: 53px auto 112px;
+  grid-template-rows: auto auto;
+  gap: .2rem 1.5rem;
+  grid-template-areas:
+    "badge name color"
+    "distance info color";
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+  background-color: var(--foreground-rgb);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  color: var(--background-rgb);
+  margin-bottom: 2rem;
+}
+
+.colorsContainer {
+  grid-area: color;
+}
+
+.infoContainer {
+  grid-area: info;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+}
+
+.infoContainer svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.teamName {
+  grid-area: name;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badgeContainer {
+  grid-area: badge;
+}
+
+.distanceContainer {
+  grid-area: distance;
+  margin: auto;
+}
+
+.teamColorsButton {
+  display: flex;
+  position: relative;
+  height: 3rem;
+  width: 6rem;
+  display: flex;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.teamColorsButton:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.teamColorsButton:active {
+  transform: translate(6px, 6px);
+}
+
+.teamColor {
+  position: relative;
+  z-index: 0;
+  flex: 1 1;
+  width: 3rem;
+  height: 100%;
+}
+
+.teamColor:before,
+.teamColor:after {
+  content: "";
+  background-color: inherit;
+  position: absolute;
+  box-shadow: 0 0 0 222px inset rgba(0, 0, 0, 0.15);
+}
+
+.teamColor:before {
+  right: 0;
+  width: 6px;
+  height: 100%;
+  transform: skewY(45deg) translateX(6px);
+  top: -3px;
+}
+
+.teamColor:after {
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  transform: skewX(45deg) translateY(6px);
+  left: -3px;
+}
+
+.teamColorsButton:active .teamColor:after,
+.teamColorsButton:active .teamColor::before {
+  display: none;
+}
