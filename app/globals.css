@@ -1,19 +1,30 @@
 :root {
   --max-width: 800px;
+  --light: #EFEDE3;
+  --dark: #1A1A1A;
 
-  --foreground-rgb: #FFFFFF;
-  --background-rgb: #1A1A1A;
+  --foreground: var(--dark);
+  --background: var(--light);
+  --high-opacity: rgba(0, 0, 0, .3);
+  --low-opacity: rgba(0, 0, 0, .06);
+
+  --header-gradient: linear-gradient(to right, #d3f586, #d62a8f, #4921b1, #3d85c6, #134f5c, #d3f586);
+  --header-shadow: drop-shadow(0 -5px 10px rgba(0, 0, 0, .3));
 }
 
-:global(.react-tooltip) {
-  color: #222;
-  background-color: rgb(0, 247, 255);
+[data-theme='dark'] {
+  --foreground: var(--light);
+  --background: var(--dark);
+  --high-opacity: rgba(255, 255, 255, .3);
+  --low-opacity: rgba(255, 255, 255, .1);
+
+  --header-gradient: linear-gradient(to right, #f6f390, #ffaeca, #d799ff, #84dfff, #90f6b8, #f6f390);
+  --header-shadow: drop-shadow(0 -5px 10px rgba(0, 0, 0, .6));
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: #1A1A1A;
-    --background-rgb: #FFFFFF;
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
   }
 }
 
@@ -30,22 +41,7 @@ body {
   min-height: 100vh;
 }
 
-body {
-  color: var(--foreground-rgb);
-  background-color: var(--background-rgb);
-  min-height: 100vh;
-  margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

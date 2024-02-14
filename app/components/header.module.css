@@ -4,7 +4,7 @@
 
 .titleSmall,
 .titleBig {
-  background-image: linear-gradient(to right, hsl(0, 0%, 98%), #eec32d, #ec4b4b, #709ab9, #4dffbf, hsl(0, 0%, 98%));
+  background-image: var(--header-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -18,8 +18,8 @@
 
 .titleBig {
   font-size: 10em;
-  filter: drop-shadow(0 -5px 10px rgba(0, 0, 0, .6));
-  margin-top: -60px;
+  filter: var(--header-shadow);
+  margin-top: -55px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,5 +35,21 @@
     to {
       background-position: 100%;
     }
+  }
+}
+
+@media (max-width: 750px) {
+  .title {
+    line-height: 1;
+  }
+
+  .titleSmall {
+    font-size: 7vi;
+  }
+
+  .titleBig {
+    font-size: 18vi;
+    margin-top: 0;
+    filter: none;
   }
 }

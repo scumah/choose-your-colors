@@ -1,6 +1,6 @@
 .teamWrapper {
   display: grid;
-  grid-template-columns: 53px auto 112px;
+  grid-template-columns: 53px auto 6rem;
   grid-template-rows: auto auto;
   gap: .2rem 1.5rem;
   grid-template-areas:
@@ -9,10 +9,10 @@
   align-items: center;
   padding: 1.5rem;
   border-radius: 5px;
-  background-color: var(--foreground-rgb);
+  background-color: white;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
-  color: var(--background-rgb);
   margin-bottom: 2rem;
+  color: var(--dark);
 }
 
 .colorsContainer {
@@ -53,7 +53,6 @@
   position: relative;
   height: 3rem;
   width: 6rem;
-  display: flex;
   outline: none;
   border: none;
   cursor: pointer;
@@ -107,4 +106,20 @@
 .teamColorsButton:active .teamColor:after,
 .teamColorsButton:active .teamColor::before {
   display: none;
+}
+
+@media (max-width: 700px) {
+  .teamWrapper {
+    grid-template-columns: 53px auto 3rem;
+  }
+
+  .teamName {
+    font-size: 1.5rem;
+  }
+
+  .teamColorsButton {
+    flex-direction: column;
+    height: 3rem;
+    width: 3rem;
+  }
 }

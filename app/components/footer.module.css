@@ -1,3 +1,21 @@
 .footerElements {
   display: flex;
+  gap: 1.5rem;
+}
+
+.footerElements li {
+  list-style-type: none;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+
+.footerLink svg {
+  margin-right: 0.5rem;
 }

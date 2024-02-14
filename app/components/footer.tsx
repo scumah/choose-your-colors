@@ -2,37 +2,35 @@
 
 import React from "react";
 
+import { FaHome, FaInfoCircle, FaGithub } from "react-icons/fa";
+
 import layoutStyles from "../layout.module.css";
 import styles from "./footer.module.css";
 
-export default function Header() {
+export default function Header({ children }: { children: React.ReactNode }) {
   return (
     <footer className={layoutStyles.main}>
       <ul className={styles.footerElements}>
         <li>
-          <a href="#" className="footer__link">
-            <i className="fab fa-facebook-f"></i>
-            facebook
+          <a href="https://higin.io" className={styles.footerLink}>
+            <FaHome /> Home
           </a>
         </li>
+        {/* <li>
+          <a href="#" className={styles.footerLink}>
+            <FaInfoCircle /> About
+          </a>
+        </li> */}
         <li>
-          <a href="#" className="footer__link">
-            <i className="fab fa-twitter"></i>
-            twitter
+          <a
+            href="https://github.com/scumah/choose-your-colors"
+            target="_blank"
+            className={styles.footerLink}
+          >
+            <FaGithub /> Github
           </a>
         </li>
-        <li>
-          <a href="#" className="footer__link">
-            <i className="fab fa-instagram"></i>
-            instagram
-          </a>
-        </li>
-        <li>
-          <a href="#" className="footer__link">
-            <i className="fab fa-youtube"></i>
-            youtube
-          </a>
-        </li>
+        <li>{children}</li>
       </ul>
     </footer>
   );

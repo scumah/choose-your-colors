@@ -1,0 +1,17 @@
+.toggler {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
+  font-size: inherit;
+}
+
+.toggler:hover {
+  text-decoration: underline;
+}
+
+.toggler svg {
+  margin-right: 0.5rem;
+}

@@ -19,7 +19,7 @@ const Team = ({
     <div className={styles.teamWrapper}>
       <div className={styles.badgeContainer}>
         <Image
-          src={`https://api.sofascore.app/api/v1/team/${team.id}/image`}
+          src={`/badges/${team.id}.png`}
           width={53}
           height={53}
           alt={`${team.name} logo`}
