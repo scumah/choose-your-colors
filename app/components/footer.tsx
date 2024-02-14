@@ -4,10 +4,12 @@ import React from "react";
 
 import { FaHome, FaInfoCircle, FaGithub } from "react-icons/fa";
 
+import ThemeToggler from "./themeToggler";
+
 import layoutStyles from "../layout.module.css";
 import styles from "./footer.module.css";
 
-export default function Header({ children }: { children: React.ReactNode }) {
+export default function Header() {
   return (
     <footer className={layoutStyles.main}>
       <ul className={styles.footerElements}>
@@ -30,7 +32,9 @@ export default function Header({ children }: { children: React.ReactNode }) {
             <FaGithub /> Github
           </a>
         </li>
-        <li>{children}</li>
+        <li>
+          <ThemeToggler />
+        </li>
       </ul>
     </footer>
   );

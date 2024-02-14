@@ -10,7 +10,6 @@ import PopoverPicker from "./components/popoverPicker";
 import InitialLoader from "./components/initialLoader";
 import Team from "./components/team";
 import ColorActions from "./components/colorActions";
-import ThemeToggler from "./components/themeToggler";
 
 import styles from "./page.module.css";
 import layoutStyles from "./layout.module.css";
@@ -97,9 +96,7 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <Footer>
-        <ThemeToggler />
-      </Footer>
+      <Footer />
     </div>
   );
 }
