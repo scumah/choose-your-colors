@@ -19,3 +19,11 @@
 .footerLink svg {
   margin-right: 0.5rem;
 }
+
+@media (max-width: 700px) {
+  .footerElements {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
