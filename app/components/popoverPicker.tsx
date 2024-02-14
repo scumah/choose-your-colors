@@ -64,8 +64,12 @@ const PopoverPicker = ({
 
   return (
     <div className={styles.picker}>
-      <div className={styles.swatchWrapper} onClick={() => toggle(true)}>
-        <div className={styles.colorContainer} style={{ background: color }}>
+      <div className={styles.swatchWrapper}>
+        <div
+          onClick={() => toggle(true)}
+          className={styles.colorContainer}
+          style={{ background: color }}
+        >
           <div
             className={`${styles.colorCode} ${color ? "" : styles.empty}`}
             style={{ color: contrastText(color) }}
