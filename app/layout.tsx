@@ -3,7 +3,11 @@ import { Inter } from "next/font/google";
 
 import { Providers } from "./providers";
 
+import Header from "./components/header";
+import Footer from "./components/footer";
+
 import "./globals.css";
+import styles from "./layout.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +25,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className={styles.mainWrapper}>
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );

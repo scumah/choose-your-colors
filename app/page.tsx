@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import useSWR from "swr";
 import { useQueryState } from "nuqs";
 
-import Header from "./components/header";
-import Footer from "./components/footer";
 import PopoverPicker from "./components/popoverPicker";
 import InitialLoader from "./components/initialLoader";
 import Team from "./components/team";
@@ -59,44 +57,42 @@ export default function Home() {
   };
 
   if (error) {
-    return <p className={styles.mainWrapper}>Error fetching teams data</p>;
+    return (
+      <p className={layoutStyles.mainWrapper}>Error fetching teams data</p>
+    );
   }
 
   return (
-    <div className={styles.mainWrapper}>
-      <Header />
-      <main className={layoutStyles.main}>
-        <InitialLoader isLoading={isLoading} />
-        <p className={styles.explanation}>
-          Pick two colors, any two colors you love, and we&apos;ll show you
-          sports teams that rock similar shades. It&apos;s that easy!
-        </p>
+    <main className={layoutStyles.main}>
+      <InitialLoader isLoading={isLoading} />
+      <p className={styles.explanation}>
+        Pick two colors, any two colors you love, and we&apos;ll show you sports
+        teams that rock similar shades. It&apos;s that easy!
+      </p>
 
-        <div className={styles.pickersWrapper}>
-          <PopoverPicker color={primaryColor} onChange={setPrimaryColor} />
-          <ColorActions
-            data={data}
-            primaryColor={primaryColor}
-            secondaryColor={secondaryColor}
-            setPrimaryColor={setPrimaryColor}
-            setSecondaryColor={setSecondaryColor}
-            setClosestTeams={setClosestTeams}
-            updateColors={updateColors}
+      <div className={styles.pickersWrapper}>
+        <PopoverPicker color={primaryColor} onChange={setPrimaryColor} />
+        <ColorActions
+          data={data}
+          primaryColor={primaryColor}
+          secondaryColor={secondaryColor}
+          setPrimaryColor={setPrimaryColor}
+          setSecondaryColor={setSecondaryColor}
+          setClosestTeams={setClosestTeams}
+          updateColors={updateColors}
+        />
+        <PopoverPicker color={secondaryColor} onChange={setSecondaryColor} />
+      </div>
+
+      <div className="result">
+        {closestTeams.map((team: TeamWithDistance) => (
+          <Team
+            key={`${team.name}-${team.sport}`}
+            team={team}
+            setTeamColors={updateColors}
           />
-          <PopoverPicker color={secondaryColor} onChange={setSecondaryColor} />
-        </div>
-
-        <div className="result">
-          {closestTeams.map((team: TeamWithDistance) => (
-            <Team
-              key={`${team.name}-${team.sport}`}
-              team={team}
-              setTeamColors={updateColors}
-            />
-          ))}
-        </div>
-      </main>
-      <Footer />
-    </div>
+        ))}
+      </div>
+    </main>
   );
 }

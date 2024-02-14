@@ -3,3 +3,12 @@
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
+.mainWrapper {
+  color: var(--foreground);
+  background-color: var(--background);
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
