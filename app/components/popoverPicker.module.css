@@ -28,7 +28,7 @@
   gap: .5rem;
   align-items: flex-end;
   box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.15);
-  background: repeating-conic-gradient(#D0CFD1 0% 25%, transparent 0% 50%) 50% / 20px 20px;
+  background: repeating-conic-gradient(#D0CFD1 0% 25%, #FFFFFF 0% 50%) 50% / 20px 20px;
   cursor: pointer;
 }
 

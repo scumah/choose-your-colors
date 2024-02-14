@@ -56,7 +56,7 @@
 .resultsLengthSlider::-moz-range-thumb {
   border: none;
   width: 0;
-  box-shadow: -20rem 0 0 20rem var(--high-opacity);
+  box-shadow: -200rem 0 0 200rem var(--high-opacity);
   ;
 }
 
