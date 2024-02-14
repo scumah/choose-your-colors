@@ -5,6 +5,10 @@
   z-index: 2;
 }
 
+.picker:first-child {
+  z-index: 3;
+}
+
 .swatchWrapper {
   display: flex;
   flex-direction: column;

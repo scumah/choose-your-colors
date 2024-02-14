@@ -9,7 +9,7 @@
   bottom: 0;
   left: 0;
   background-color: var(--background);
-  z-index: 3;
+  z-index: 4;
   transition: all cubic-bezier(1, 0, 0, 1) 0.5s;
 }
 
