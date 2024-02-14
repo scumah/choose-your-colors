@@ -13,7 +13,51 @@
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
+  align-items: stretch;
+}
+
+.resultsLengthSliderWrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.resultsLengthSliderWrapper span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  line-height: 2rem;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.resultsLengthSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--low-opacity);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: row-resize;
+}
+
+.resultsLengthSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  box-shadow: -200rem 0 0 200rem var(--high-opacity);
+  ;
+}
+
+.resultsLengthSlider::-moz-range-thumb {
+  border: none;
+  width: 0;
+  box-shadow: -20rem 0 0 20rem var(--high-opacity);
+  ;
 }
 
 @media (max-width: 700px) {

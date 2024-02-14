@@ -7,7 +7,6 @@ export default function nearestColorsTeams(
   primaryInputHex: string,
   secondaryInputHex: string,
   baseColors: Team[],
-  count: number = 5,
 ): NearestColor[] {
   const distances: NearestColor[] = [];
 
@@ -18,5 +17,5 @@ export default function nearestColorsTeams(
     distances.push({ distance: primaryDistance + secondaryDistance, index: i });
   });
 
-  return distances.sort((a, b) => a.distance - b.distance).splice(0, count);
+  return distances.sort((a, b) => a.distance - b.distance);
 }

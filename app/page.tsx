@@ -30,6 +30,7 @@ export default function Home() {
   const debouncedSecondaryColor = useDebounce<string>(secondaryColor, 100);
 
   const [closestTeams, setClosestTeams] = useState<TeamWithDistance[]>([]);
+  const [resultLength, setResultLength] = useState<number>(5);
 
   const { data, error, isLoading } = useSWR("/teams.json", fetcher);
 
@@ -46,7 +47,7 @@ export default function Home() {
         })),
       );
     }
-  }, [debouncedPrimaryColor, debouncedSecondaryColor, data]);
+  }, [debouncedPrimaryColor, debouncedSecondaryColor, data, resultLength]);
 
   const updateColors = (
     newPrimaryColor: string | null,
@@ -69,7 +70,6 @@ export default function Home() {
         Pick two colors, any two colors you love, and we&apos;ll show you sports
         teams that rock similar shades. It&apos;s that easy!
       </p>
-
       <div className={styles.pickersWrapper}>
         <PopoverPicker color={primaryColor} onChange={setPrimaryColor} />
         <ColorActions
@@ -83,16 +83,25 @@ export default function Home() {
         />
         <PopoverPicker color={secondaryColor} onChange={setSecondaryColor} />
       </div>
-
-      <div className="result">
-        {closestTeams.map((team: TeamWithDistance) => (
-          <Team
-            key={`${team.name}-${team.sport}`}
-            team={team}
-            setTeamColors={updateColors}
-          />
-        ))}
+      <div className={styles.resultsLengthSliderWrapper}>
+        <input
+          className={styles.resultsLengthSlider}
+          type="range"
+          min="1"
+          max="20"
+          value={resultLength}
+          onChange={(e) => setResultLength(+e.target.value)}
+          step="1"
+        ></input>
+        <span>Show {resultLength} teams</span>
       </div>
+      {closestTeams.slice(0, resultLength).map((team: TeamWithDistance) => (
+        <Team
+          key={`${team.name}-${team.sport}`}
+          team={team}
+          setTeamColors={updateColors}
+        />
+      ))}
     </main>
   );
 }
