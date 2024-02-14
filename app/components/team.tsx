@@ -37,7 +37,9 @@ const Team = ({
           height={15}
           alt={`${team.country.name} flag`}
         />
-        {team.country.name}
+        <span title={team.country.name} className={styles.teamCountryName}>
+          {team.country.name}
+        </span>
         {sportIcon(team.sport)}
       </div>
 

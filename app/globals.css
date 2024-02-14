@@ -10,6 +10,9 @@
 
   --header-gradient: linear-gradient(to right, #d3f586, #d62a8f, #4921b1, #3d85c6, #134f5c, #d3f586);
   --header-shadow: drop-shadow(0 -5px 10px rgba(0, 0, 0, .3));
+
+  --box-background: #FFFFFF;
+  --box-text: var(--dark);
 }
 
 [data-theme='dark'] {
@@ -20,6 +23,9 @@
 
   --header-gradient: linear-gradient(to right, #f6f390, #ffaeca, #d799ff, #84dfff, #90f6b8, #f6f390);
   --header-shadow: drop-shadow(0 -5px 10px rgba(0, 0, 0, .6));
+
+  --box-background: var(--low-opacity);
+  --box-text: var(--light);
 }
 
 @media (prefers-color-scheme: dark) {

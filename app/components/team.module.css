@@ -9,10 +9,10 @@
   align-items: center;
   padding: 1.5rem;
   border-radius: 5px;
-  background-color: white;
+  background-color: var(--box-background);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-  color: var(--dark);
+  color: var(--box-text);
 }
 
 .colorsContainer {
@@ -21,9 +21,16 @@
 
 .infoContainer {
   grid-area: info;
-  display: flex;
   align-items: center;
-  gap: .2rem;
+  gap: .5rem;
+  display: grid;
+  grid-template-columns: 20px minmax(auto, max-content) auto;
+}
+
+.teamCountryName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .infoContainer svg {
@@ -79,6 +86,14 @@
   height: 100%;
 }
 
+.teamColor:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.teamColor:last-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .teamColor:before,
 .teamColor:after {
   content: "";
@@ -121,5 +136,15 @@
     flex-direction: column;
     height: 3rem;
     width: 3rem;
+  }
+
+  .teamColor:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: none;
+  }
+
+  .teamColor:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
   }
 }
