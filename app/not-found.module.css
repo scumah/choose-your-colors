@@ -1,0 +1,14 @@
+.goHomeLinkWrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.goHomeLink {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.goHomeLink:hover {
+  text-decoration: none;
+}
