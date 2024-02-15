@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import useSWR from "swr";
 import { useQueryState } from "nuqs";
 
+import { FaExclamationCircle } from "react-icons/fa";
+
 import PopoverPicker from "./components/popoverPicker";
 import InitialLoader from "./components/initialLoader";
 import Team from "./components/team";
@@ -59,7 +61,12 @@ export default function Home() {
 
   if (error) {
     return (
-      <p className={layoutStyles.mainWrapper}>Error fetching teams data</p>
+      <p className={`${layoutStyles.main} ${styles.fetchError}`}>
+        <FaExclamationCircle />
+        I&apos;m afraid there was an error fetching teams data. You can try
+        again, but I&apos;m sorry to say it probably wont work either. I&apos;ll
+        look into it soon though.
+      </p>
     );
   }
 

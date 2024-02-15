@@ -8,6 +8,24 @@
   padding: 1rem;
 }
 
+.fetchError {
+  margin-top: 12vh;
+  display: flex;
+  color: var(--light);
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  background-color: rgba(229, 83, 83, 0.8);
+  border-radius: 5px;
+  height: fit-content;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fetchError svg {
+  min-width: 3rem;
+  font-size: 3rem;
+}
+
 .pickersWrapper {
   display: flex;
   gap: 1rem;
@@ -68,5 +86,10 @@
   .explanation {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .fetchError {
+    font-size: 1rem;
+    margin: 2rem 1rem 0;
   }
 }
