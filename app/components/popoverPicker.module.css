@@ -92,10 +92,22 @@
   color: var(--box-text);
   font-size: 1.2rem;
   font-weight: 800;
-  height: 2rem;
+  line-height: 2rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.colorName button {
+  background: none;
+  border: none;
+  color: var(--box-text);
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 2rem;
 }
 
 .popover {

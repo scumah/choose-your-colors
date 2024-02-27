@@ -58,7 +58,11 @@ const PopoverPicker = ({
     }
 
     return (
-      <span className={styles.colorName}>{colorName || "Choose a color"}</span>
+      <span className={styles.colorName}>
+        {colorName || (
+          <button onClick={() => toggle(true)}>Choose a color</button>
+        )}
+      </span>
     );
   };
 
