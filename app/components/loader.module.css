@@ -7,11 +7,11 @@
 
 .loader {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2px solid rgba(0, 0, 0, .3);
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--high-opacity);
   border-radius: 50%;
-  border-top-color: black;
+  border-top-color: var(--foreground);
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }

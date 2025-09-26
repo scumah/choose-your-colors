@@ -10,6 +10,13 @@
 .footerLink {
   display: flex;
   align-items: center;
+  background: none;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
 }
 
 .footerLink:hover {

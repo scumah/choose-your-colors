@@ -1,0 +1,67 @@
+.content {
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
+
+.list li strong {
+  color: var(--foreground);
+}
+
+.actionsList {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.125rem;
+  }
+  
+  .list {
+    margin-left: 1.25rem;
+  }
+}

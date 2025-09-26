@@ -13,6 +13,9 @@
 
   --box-background: #FFFFFF;
   --box-text: var(--dark);
+  
+  --border-color: var(--low-opacity);
+  --hover-background: var(--low-opacity);
 }
 
 [data-theme='dark'] {
