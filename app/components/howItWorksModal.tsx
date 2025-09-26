@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  FaExchangeAlt,
+  FaBullseye,
+  FaRegQuestionCircle,
+  FaRegTimesCircle,
+} from "react-icons/fa";
+
 import Modal from "./modal";
 import styles from "./howItWorksModal.module.css";
 
@@ -94,22 +101,26 @@ export default function HowItWorksModal({
             </li>
             <li>
               <strong>Use the action buttons</strong> between the color pickers:
-              <ul style={{ marginTop: "0.5rem", marginBottom: 0 }}>
+              <ul className={styles.actionsList}>
                 <li>
-                  <strong>Swap colors</strong> (↔️) - Switch your primary and
-                  secondary colors instantly
+                  <strong>Swap colors</strong>{" "}
+                  <FaExchangeAlt className={styles.icon} /> - Switch your
+                  primary and secondary colors instantly
                 </li>
                 <li>
-                  <strong>Random team colors</strong> (🎯) - Pick colors from a
+                  <strong>Random team colors</strong>{" "}
+                  <FaBullseye className={styles.icon} /> - Pick colors from a
                   random existing team
                 </li>
                 <li>
-                  <strong>Totally random colors</strong> (❓) - Generate
+                  <strong>Totally random colors</strong>{" "}
+                  <FaRegQuestionCircle className={styles.icon} /> - Generate
                   completely random color combinations
                 </li>
                 <li>
-                  <strong>Reset colors</strong> (⊗) - Clear your selections and
-                  start fresh
+                  <strong>Reset colors</strong>{" "}
+                  <FaRegTimesCircle className={styles.icon} /> - Clear your
+                  selections and start fresh
                 </li>
               </ul>
             </li>

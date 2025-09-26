@@ -47,6 +47,15 @@
   color: var(--foreground);
 }
 
+.actionsList {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .sectionTitle {
     font-size: 1.125rem;
