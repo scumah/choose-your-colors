@@ -74,11 +74,11 @@ export default function HowItWorksModal({
             world:
           </p>
           <ul className={styles.list}>
-            <li>🏈 NFL (American Football)</li>
+            <li>⚽ Football teams</li>
             <li>🏀 NBA (Basketball)</li>
+            <li>🏈 NFL (American Football)</li>
             <li>⚾ MLB (Baseball)</li>
             <li>🏒 NHL (Hockey)</li>
-            <li>⚽ Soccer/Football leagues worldwide</li>
             <li>🏏 Cricket teams</li>
             <li>🏉 Rugby teams</li>
             <li>And many more!</li>
@@ -93,12 +93,29 @@ export default function HowItWorksModal({
               - teams often use colors that pop together!
             </li>
             <li>
-              <strong>Use the randomize button</strong> (🎲) to discover
-              unexpected color combinations and teams.
+              <strong>Use the action buttons</strong> between the color pickers:
+              <ul style={{ marginTop: "0.5rem", marginBottom: 0 }}>
+                <li>
+                  <strong>Swap colors</strong> (↔️) - Switch your primary and
+                  secondary colors instantly
+                </li>
+                <li>
+                  <strong>Random team colors</strong> (🎯) - Pick colors from a
+                  random existing team
+                </li>
+                <li>
+                  <strong>Totally random colors</strong> (❓) - Generate
+                  completely random color combinations
+                </li>
+                <li>
+                  <strong>Reset colors</strong> (⊗) - Clear your selections and
+                  start fresh
+                </li>
+              </ul>
             </li>
             <li>
               <strong>Share your results</strong> - the URL updates with your
-              color choices, so you can share your findings with friends!
+              color choices, so you can share your findings.
             </li>
           </ul>
         </section>

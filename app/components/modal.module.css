@@ -54,7 +54,8 @@
 }
 
 .closeButton:hover {
-  background-color: var(--hover-background);
+  background-color: var(--foreground);
+  color: var(--background);
 }
 
 .content {
